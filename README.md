@@ -1,2 +1,20 @@
 # CS2134-Homework-2-solution
-CS2134 Homework 2 solution
+
+Download Here: [CS2134 Homework 2 solution](https://jarviscodinghub.com/assignment/cs2134-homework-2-solution/)
+
+For Custom/Original Work email jarviscodinghub@gmail.com/whatsapp +1(541)423-7793
+
+Assignment 2 includes a programming portion and a written portion. The programming portion must compile and should consist of a single ﬁle (hw02.cpp). The written portion should consist of a single ﬁle (hw02written) in a .pdf format. Be sure to include your name at the beginning of each ﬁle! You must hand in both ﬁles via NYU Classes. No late assignments will be accepted.
+Programming Part:
+1. For the class called IntArray implement a deep copy constructor, a move constructor, a destructor, and a move assignment operators. Use the std::swap function if appropriate, and below where you used the std::swap function, write as a comment the code to perform the same steps without using the std::swap function. You may implement the put and get methods to test your code. You will not be graded on these methods. Implement the methods outside the class interface.
+class IntArray{ public:
+IntArray(int n = 0): size(n), array(new int[n]){} // add your methods here
+void put (int i, int value); int get( int i); private: int * array; int size; };
+∗A bonus of %10 percent will be given if you turn in this homework assignment by Mon. Feb 8 at 11:00 p.m.
+1
+Written Part
+1. For each of the following code fragments, determine the worst case running time using BigOh notation as a function of n.
+(a) int sum = 0; for (int k = n; k>=1; k = (int) k/3) sum += k; cout << sum; (b) for (int j = 1; j <= n; j++) { for (int i = j; i > 1; i/=9) cout << "(" << i << ", " << j << ") " ; cout << endl; } (c) template int min(const vector & items) { if (items.size() == 0) return -1;
+int min_index = 0;
+for (int i = 0; i < items.size(); ++i) if (items[i] < items[min_index]) min_index = i; return min_index; } (d) for( i = 0; i < n; ++i) for (j = 0; j < n; ++j) a[i][j] = b[i][j] + c[i][j]; 2 (e) void in_order( vector & a ) { int j = 0; for( int p = 1; p < a.size( ); p++ ) { print(a); // This function takes O(n) time. Comparable tmp = a[ p ]; for( j = p; j > 0 && tmp < a[ j - 1 ]; j-- ) a[ j ] = a[ j - 1 ]; a[ j ] = tmp; } } 2. For the following functions, order them by their rates of growth from fastest to slowest: n,√n,n1.5,n2,nlogn,nlog2 n,n/2,n3. Indicate which functions grow at the same rate. 3. What is the diﬀerence between delete [] and delete? 4. For programming problem 1, Using big-Oh notation if size = n, give the worst case running time for the: (a) copy constructor (b) move constructor 5. Using big-Oh notation what is the running time of the following code snippets where v is a vector of n > 0 integers.
+(a) void f( vector b ) { cout << b[0]; } int main( ) { // code to create the vector v which will not be included in your run time f( v ); } (b) void f( vector & b ) { cout << b[0]; } int main( ) { // code to create the vector v which will not be included in your run time f( v ); } 3 6. If your code contained the following functions1 // Function 1 void f( const string & s ) { cout << "Function 1 was called." << endl; } // Function 2 void f( string & s ) { cout << "Function 2 was called." << endl; } // Function 3 void f( string && s ) { cout << "Function 3 was called." << endl; } State which function was called for each of the following. (a) f(string("hello")); (b) string s1 = "hello"; f(s1); (c) string s2 = "hello"; f( std::move(s2) ); (d) const string s3 = "hello"; f(s3); 7. Determine if the speciﬁed expression is an rvalue or an lvalue: • int x = 3; // what is x • char * ptr = new char[3]; // what is new char[3] • int f( ) return 1; // What is the return value of the function f • string && sRef = string("What?"); // what is sRef 1Please run these functions to check your answer. Do not turn in your code. 4 8. Anything wrong with this code? If there is, please describe what the problem is, otherwise state there is no problem. string & getName( ) { string name; cout << "Please enter your name: "; cin >> name; cout << "Hi " << name << ’!’ << endl; return name; } int main( ) { cout << getName( ); }
